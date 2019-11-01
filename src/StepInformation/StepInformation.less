@@ -1,0 +1,118 @@
+@import "../index.less";
+
+.contentBlock {
+  display: flex;
+  flex-wrap: nowrap;
+
+  // Left Column
+  .leftColumn {
+    width: 100%;
+    padding-right: 80px;
+
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+      & > * {
+        width: calc(100% / 2);
+      }
+    }
+    .districtBlock {
+      & > * {
+        width: calc((100% - 30px) / 2);
+      }
+    }
+    .addressBlock {
+      display: flex;
+      & > * {
+        margin-right: 0;
+        &:not(:last-child) input {
+          border-right-color: transparent;
+        }
+        &:nth-child(1) {
+          width: 20%;
+          select {
+            width: 100%;
+            border-radius: 2px 0 0 2px;
+            border-right-color: transparent;
+          }
+        }
+        &:nth-child(2) {
+          width: 65%;
+          border-radius: 0;
+        }
+        &:nth-child(3) {
+          width: 15%;
+          border-radius: 0 2px 2px 0;
+        }
+        input:focus,
+        select:focus {
+          border-color: @blue1;
+        }
+        input:hover,
+        select:hover {
+          border-color: #c0c9e1;
+        }
+      }
+    }
+  }
+
+  // Right Column (Image)
+  .rightColumn {
+    display: flex;
+    justify-content: center;
+    .addImageBtn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 138px;
+      height: 27px;
+      background: @blue1;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 12px;
+      i {
+        margin-right: 7px;
+      }
+      label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+        input[type="file"] {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+    }
+    .imageFrame {
+      margin-top: 13px;
+      width: 214px;
+      height: 214px;
+      padding: 3px;
+      border: 1px #e1e6f0 solid;
+      .image {
+        width: 100%;
+        height: 100%;
+        background: #ecf0ff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      &.round {
+        border-radius: 50%;
+        .image {
+          background-position: top center;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

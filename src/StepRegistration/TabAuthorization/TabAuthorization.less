@@ -1,0 +1,69 @@
+@import "../../index.less";
+@import "../StepRegistration.less";
+
+.TabAuthorization {
+  .contentBlock {
+    display: flex;
+    flex-wrap: nowrap;
+
+    // Left Column
+    .leftColumn {
+      width: 70%;
+    }
+
+    // Right Column
+    .rightColumn {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      .useLigaIdBtn,
+      .currLigaIdUsed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 12px;
+        line-height: 1.3;
+        span {
+          text-align: center;
+        }
+      }
+      .useLigaIdBtn {
+        width: 135px;
+        background: #edf1ff;
+        color: #657abd;
+        cursor: pointer;
+      }
+      .currLigaIdUsed {
+        display: flex;
+        flex-wrap: nowrap;
+        background: #def5d1;
+        color: #65b33a;
+        padding: 0 20px 0 25px;
+        cursor: default;
+        & > div {
+          display: flex;
+          align-items: center;
+        }
+        & > div:last-child {
+          min-width: 100px;
+        }
+        .checkmark{
+          display:inline-block;
+          margin-right: 20px;
+          padding: 0 0 7px 5px;
+          &:after{
+            content: '';
+            display: block;
+            width: 13px;
+            height: 22px;
+            border: solid #65b33a;
+            border-width: 0 4px 4px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

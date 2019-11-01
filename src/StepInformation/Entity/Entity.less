@@ -1,0 +1,25 @@
+@import "../../index.less";
+@import "../StepInformation.less";
+
+.Entity {
+  .contentBlock {
+
+    // Left Column
+    .leftColumn {
+      .companyInfoSection,
+      .contactPersonSection {
+        margin-bottom: 30px;
+      }
+      .companyInfoSection {
+        & > *:last-child {
+          width: calc(50% - 15px);
+        }
+      }
+      .contactPersonSection {
+        .row {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

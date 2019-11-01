@@ -1,0 +1,35 @@
+@import "../../index.less";
+@import "../StepInformation.less";
+
+.Individual {
+  .contentBlock {
+
+    // Left Column
+    .leftColumn {
+      .nameBlock {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+        .inputWrapper {
+          width: calc(100% / 3);
+        }
+      }
+      .individualTypeBlock {
+        margin-bottom: 20px;
+      }
+      .licenseBlock {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+      .contactsBlock {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+        .inputWrapper {
+          width: calc(100% / 2);
+        }
+      }
+    }
+  }
+}

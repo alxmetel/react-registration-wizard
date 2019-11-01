@@ -1,0 +1,126 @@
+@import "../index.less";
+
+.stepConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .confirmationTitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #27375a;
+    margin-bottom: 10px;
+  }
+  .confirmationSubtitle {
+    width: 200px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  .horizontalDivider {
+    position: relative;
+    width: 32px;
+    &:after {
+      content: "";
+      position: absolute;
+      background: @orange;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      border-radius: 2px 2px 0 0;
+    }
+  }
+  .contentBlock {
+    width: 800px;
+    padding-bottom: 20px;
+    .firmTypeTitle {
+      color: #6f8ac4;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 30px;
+    }
+    .dataBlock {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 50px;
+      .column1,
+      .column2 {
+        width: 50%;
+        padding-right: 40px;
+      }
+      .dataItem {
+        &.hidden {
+          display: none;
+        }
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+        .subtitle {
+          font-size: 12px;
+          color: @orange;
+          margin-bottom: 4px;
+        }
+        .dataContent {
+          font-size: 16px;
+          line-height: 1.2;
+        }
+      }
+      .imageFrame {
+        width: 152px;
+        height: 152px;
+        padding: 3px;
+        border: 1px #e1e6f0 solid;
+        .image {
+          width: 100%;
+          height: 100%;
+          background: #ecf0ff;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        &.round {
+          border-radius: 50%;
+          .image {
+            background-position: top center;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .contentHorizontalDivider {
+      width: 330px;
+      border-bottom: 3px solid #ededed;
+      margin: 0 auto 20px;
+    }
+    .confirmationChangeBtnWrapper {
+      display: flex;
+      justify-content: center;
+      .confirmationChangeBtn {
+        color: #657abd;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .submitBtn {
+    margin-bottom: 15px;
+  }
+
+  .submitNotice {
+    width: 200px;
+    color: rgba(111, 138, 196, 0.8);
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 50px;
+  }
+}
